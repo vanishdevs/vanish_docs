@@ -6,9 +6,9 @@
 
 ## Resources
 
-* [📱 Gang Phone](<README (1).md>)
-  * [Installation](resources/gang-phone/installation.md)
-  * [Configuration](resources/gang-phone/configuration.md)
+* [📱 Gang Phone](resources/gangphone/README.md)
+  * [Installation](resources/gangphone/installation.md)
+  * [Configuration](resources/gangphone/configuration.md)
 * [🔫 Switch](resources/switch/README.md)
   * [Installation](resources/switch/installation.md)
   * [Configuration](resources/switch/configuration.md)
