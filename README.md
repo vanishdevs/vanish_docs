@@ -1,8 +1,8 @@
 ---
 description: >-
   Welcome to our documentation, a curated website offering comprehensive guides
-  and documentation for both paid and free resources. Uncover detailed insights
-  to optimize your experience and proficiency.
+  and documentation for my paid resources. Uncover detailed insights to optimize
+  your experience and proficiency.
 ---
 
 # 👋 Introduction
