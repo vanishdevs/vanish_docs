@@ -1,12 +1,8 @@
 # Table of contents
 
-## Information
-
-* [👋 Introduction](README.md)
-
 ## Resources
 
-* [📱 Gang Phone](resources/gang-phone/README.md)
+* [📱 Gang Phone](README.md)
   * [Installation](resources/gang-phone/installation.md)
   * [Configuration](resources/gang-phone/configuration.md)
 * [🔫 Switch](resources/switch/README.md)

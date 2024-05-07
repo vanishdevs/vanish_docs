@@ -1,9 +1,20 @@
 ---
 description: >-
-  Welcome to my documentation page, here you will find all documentation related
-  to my paid resources that I am maintaining to this day. Feel free to visit my
-  discord for any questions and concerns.
+  Our resource enables seamless conflict initiation through a unique phone item,
+  facilitating effortless communication and war declarations between gang
+  leaders.
 ---
 
-# 👋 Introduction
+# 📱 Gang Phone
 
+## Features
+
+* &#x20;Initiate conflicts seamlessly with a unique phone item.
+* &#x20;Declare wars, set wagers, and communicate with opposing gang leaders effortlessly.
+* Witness real-time intensity with a live leaderboard tracking kills during gang wars.
+* Determine the victorious gang by achieving the specified kill count configured to your liking.
+* Tailor the script precisely to your server’s needs through the user-friendly config.lua file.
+
+## Preview
+
+Coming soon..
