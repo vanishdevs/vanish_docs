@@ -15,3 +15,9 @@
 * [💸 Money Wash](resources/money-wash/README.md)
   * [Installation](resources/money-wash/installation.md)
   * [Configuration](resources/money-wash/configuration.md)
+
+## 🔫 Weapon Packs
+
+* [Female V1](weapon-packs/female-v1/README.md)
+  * [Installation](weapon-packs/female-v1/installation.md)
+  * [Ox Inventory](weapon-packs/female-v1/ox-inventory.md)
