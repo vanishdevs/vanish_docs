@@ -76,23 +76,6 @@ description: >-
 * Insert/Replace this next snippet at the bottom of the `weapons.lua` file in order for attachments to work, if you don't want this, just skep this step
 
 ```lua
-['at_suppressor_light'] = {
-	label = 'Suppressor',
-	weight = 280,
-	type = 'muzzle',
-	client = {
-		component = {
-			`COMPONENT_AT_PI_SUPP`,
-			`COMPONENT_AT_PI_SUPP_02`,
-			`COMPONENT_CERAMICPISTOL_SUPP`,
-			`COMPONENT_PISTOLXM3_SUPP`,
-
-			`COMPONENT_AT_PI_FUSP_SUPP`, -- vanishdev female v1
-		},
-		usetime = 2500
-	}
-},
-
 ['at_clip_extended_pistol'] = {
 	label = 'Extended Pistol Clip',
 	type = 'magazine',
