@@ -6,6 +6,10 @@
 
 ## Resources
 
+* [🧑‍🤝‍🧑 Escort](resources/escort/README.md)
+  * [Installation](resources/escort/installation.md)
+  * [Configuration](resources/escort/configuration.md)
+  * [Exports](resources/escort/exports.md)
 * [📱 Gang Phone](resources/gangphone/README.md)
   * [Installation](resources/gangphone/installation.md)
   * [Configuration](resources/gangphone/configuration.md)
