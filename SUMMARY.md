@@ -9,6 +9,10 @@
 * [Gangs System](gang-series/gangs-system/README.md)
   * [Installation](gang-series/gangs-system/installation.md)
   * [Configuration](gang-series/gangs-system/configuration.md)
+  * [Guides](gang-series/gangs-system/guides/README.md)
+    * [Gang Administration](gang-series/gangs-system/guides/gang-administration.md)
+    * [Gang Management](gang-series/gangs-system/guides/gang-management.md)
+  * [Exports](gang-series/gangs-system/exports.md)
 
 ## Everyday Scripts
 
