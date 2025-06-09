@@ -1,0 +1,6 @@
+---
+icon: gun
+---
+
+# Gangs System
+

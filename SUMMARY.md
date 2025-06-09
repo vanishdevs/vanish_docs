@@ -4,21 +4,27 @@
 
 * [👋 Introduction](README.md)
 
-## Resources
+## Gang Series
 
-* [🧑‍🤝‍🧑 Escort](resources/escort/README.md)
-  * [Installation](resources/escort/installation.md)
-  * [Configuration](resources/escort/configuration.md)
-  * [Exports](resources/escort/exports.md)
-* [📱 Gang Phone](resources/gangphone/README.md)
-  * [Installation](resources/gangphone/installation.md)
-  * [Configuration](resources/gangphone/configuration.md)
-* [🔫 Switch](resources/switch/README.md)
-  * [Installation](resources/switch/installation.md)
-  * [Configuration](resources/switch/configuration.md)
-* [💸 Money Wash](resources/money-wash/README.md)
-  * [Installation](resources/money-wash/installation.md)
-  * [Configuration](resources/money-wash/configuration.md)
+* [Gangs System](gang-series/gangs-system/README.md)
+  * [Installation](gang-series/gangs-system/installation.md)
+  * [Configuration](gang-series/gangs-system/configuration.md)
+
+## Everyday Scripts
+
+* [🧑‍🤝‍🧑 Escort](everyday-scripts/escort/README.md)
+  * [Installation](everyday-scripts/escort/installation.md)
+  * [Configuration](everyday-scripts/escort/configuration.md)
+  * [Exports](everyday-scripts/escort/exports.md)
+* [📱 Gang Phone](everyday-scripts/gangphone/README.md)
+  * [Installation](everyday-scripts/gangphone/installation.md)
+  * [Configuration](everyday-scripts/gangphone/configuration.md)
+* [🔫 Switch](everyday-scripts/switch/README.md)
+  * [Installation](everyday-scripts/switch/installation.md)
+  * [Configuration](everyday-scripts/switch/configuration.md)
+* [💸 Money Wash](everyday-scripts/money-wash/README.md)
+  * [Installation](everyday-scripts/money-wash/installation.md)
+  * [Configuration](everyday-scripts/money-wash/configuration.md)
 
 ## 🔫 Weapon Packs
 
