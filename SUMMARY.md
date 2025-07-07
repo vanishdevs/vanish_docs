@@ -13,6 +13,9 @@
     * [Gang Administration](gang-series/gangs-system/guides/gang-administration.md)
     * [Gang Management](gang-series/gangs-system/guides/gang-management.md)
   * [Exports](gang-series/gangs-system/exports.md)
+* [Sell Drugs](gang-series/sell-drugs/README.md)
+  * [Installation](gang-series/sell-drugs/installation.md)
+  * [Configuration](gang-series/sell-drugs/configuration.md)
 
 ## Everyday Scripts
 
