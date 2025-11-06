@@ -19,4 +19,4 @@ icon: pills
 
 ## Preview
 
-Coming soon
+{% embed url="https://youtu.be/jasR03EIfhk?si=xJTolpcsJbGGYPAZ" %}

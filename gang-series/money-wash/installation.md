@@ -10,9 +10,8 @@ description: >-
 
 The following dependencies listed below are required to the run this resource, without them, this resource will not work.
 
-* ESX (es\_extended) [https://github.com/esx-framework/esx\_core](https://github.com/esx-framework/esx\_core)
-* ox\_lib [https://github.com/overextended/ox\_lib](https://github.com/overextended/ox\_lib)
-* progressbar [https://github.com/quasar-store-organizations/progressbar](https://github.com/quasar-store-organizations/progressbar)
+* ESX (es\_extended) [https://github.com/esx-framework/esx\_core](https://github.com/esx-framework/esx_core)
+* ox\_lib [https://github.com/overextended/ox\_lib](https://github.com/overextended/ox_lib)
 
 ## Steps
 

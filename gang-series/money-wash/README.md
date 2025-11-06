@@ -3,9 +3,10 @@ description: >-
   This script enables the implementation of a money laundering system within
   your FiveM server. It provides functionalities for processing transactions and
   converting illegal funds into legitimate ones.
+icon: sack-dollar
 ---
 
-# 💸 Money Wash
+# Money Wash
 
 ## Features
 

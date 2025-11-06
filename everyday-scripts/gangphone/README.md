@@ -3,6 +3,7 @@ description: >-
   Our resource enables seamless conflict initiation through a unique phone item,
   facilitating effortless communication and war declarations between gang
   leaders.
+hidden: true
 ---
 
 # 📱 Gang Phone
