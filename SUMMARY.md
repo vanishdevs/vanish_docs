@@ -36,6 +36,10 @@
 * [🔫 Switch](everyday-scripts/switch/README.md)
   * [Installation](everyday-scripts/switch/installation.md)
   * [Configuration](everyday-scripts/switch/configuration.md)
+* [🔫 Gun Jam](everyday-scripts/gunjam/README.md)
+  * [Installation](everyday-scripts/gunjam/installation.md)
+  * [Configuration](everyday-scripts/gunjam/configuration.md)
+  * [Exports](everyday-scripts/gunjam/exports.md)
 
 ## 🔫 Weapon Packs
 
