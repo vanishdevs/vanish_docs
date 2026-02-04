@@ -6,7 +6,8 @@ description: >-
 
 # Exports
 
-**Client**\
+**Client**
+
 The gun jam system provides client-side exports for checking and managing weapon jam states.
 
 **Helper Exports (Recommended)**\

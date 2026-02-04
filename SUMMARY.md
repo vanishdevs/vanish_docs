@@ -13,6 +13,9 @@
     * [Gang Administration](gang-series/gangs-system/guides/gang-administration.md)
     * [Gang Management](gang-series/gangs-system/guides/gang-management.md)
   * [Exports](gang-series/gangs-system/exports.md)
+* [📱 Gang Phone](gang-series/gangphone/README.md)
+  * [Installation](gang-series/gangphone/installation.md)
+  * [Configuration](gang-series/gangphone/configuration.md)
 * [Turfs](gang-series/turfs/README.md)
   * [Installation](gang-series/turfs/installation.md)
   * [Configuration](gang-series/turfs/configuration.md)
@@ -26,20 +29,21 @@
 
 ## Everyday Scripts
 
-* [🧑‍🤝‍🧑 Escort](everyday-scripts/escort/README.md)
-  * [Installation](everyday-scripts/escort/installation.md)
-  * [Configuration](everyday-scripts/escort/configuration.md)
-  * [Exports](everyday-scripts/escort/exports.md)
-* [📱 Gang Phone](everyday-scripts/gangphone/README.md)
-  * [Installation](everyday-scripts/gangphone/installation.md)
-  * [Configuration](everyday-scripts/gangphone/configuration.md)
-* [🔫 Switch](everyday-scripts/switch/README.md)
-  * [Installation](everyday-scripts/switch/installation.md)
-  * [Configuration](everyday-scripts/switch/configuration.md)
+* [🛍️ Shops](everyday-scripts/shops/README.md)
+  * [Installation](everyday-scripts/shops/installation.md)
+  * [Configuration](everyday-scripts/shops/configuration.md)
+  * [Exports](everyday-scripts/shops/exports.md)
 * [🔫 Gun Jam](everyday-scripts/gunjam/README.md)
   * [Installation](everyday-scripts/gunjam/installation.md)
   * [Configuration](everyday-scripts/gunjam/configuration.md)
   * [Exports](everyday-scripts/gunjam/exports.md)
+* [🧑‍🤝‍🧑 Escort](everyday-scripts/escort/README.md)
+  * [Installation](everyday-scripts/escort/installation.md)
+  * [Configuration](everyday-scripts/escort/configuration.md)
+  * [Exports](everyday-scripts/escort/exports.md)
+* [🔫 Switch](everyday-scripts/switch/README.md)
+  * [Installation](everyday-scripts/switch/installation.md)
+  * [Configuration](everyday-scripts/switch/configuration.md)
 
 ## 🔫 Weapon Packs
 
