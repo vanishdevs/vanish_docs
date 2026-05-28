@@ -27,6 +27,18 @@
   * [Installation](gang-series/money-wash/installation.md)
   * [Configuration](gang-series/money-wash/configuration.md)
 
+## Editor Series
+
+* [Weapon Editor](editor-series/weapon-editor/README.md)
+  * [Installation](editor-series/weapon-editor/installation.md)
+  * [Configuration](editor-series/weapon-editor/configuration.md)
+  * [Exports](editor-series/weapon-editor/exports.md)
+  * [Troubleshooting / FAQ](editor-series/weapon-editor/troubleshooting-faq.md)
+* [Turfs](editor-series/turfs/README.md)
+  * [Installation](editor-series/turfs/installation.md)
+  * [Configuration](editor-series/turfs/configuration.md)
+  * [Exports](editor-series/turfs/exports.md)
+
 ## Everyday Scripts
 
 * [🛍️ Shops](everyday-scripts/shops/README.md)
