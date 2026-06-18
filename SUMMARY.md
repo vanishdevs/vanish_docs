@@ -4,6 +4,12 @@
 
 * [👋 Introduction](README.md)
 
+## Apps
+
+* [Live Location](apps/live-location/README.md)
+  * [Installation](apps/live-location/installation.md)
+  * [Configuration](apps/live-location/configuration.md)
+
 ## Gang Series
 
 * [Gangs System](gang-series/gangs-system/README.md)
@@ -13,7 +19,7 @@
     * [Gang Administration](gang-series/gangs-system/guides/gang-administration.md)
     * [Gang Management](gang-series/gangs-system/guides/gang-management.md)
   * [Exports](gang-series/gangs-system/exports.md)
-* [📱 Gang Phone](gang-series/gangphone/README.md)
+* [Gang Phone](gang-series/gangphone/README.md)
   * [Installation](gang-series/gangphone/installation.md)
   * [Configuration](gang-series/gangphone/configuration.md)
   * [Exports](gang-series/gangphone/exports.md)
@@ -21,6 +27,10 @@
   * [Installation](gang-series/turfs/installation.md)
   * [Configuration](gang-series/turfs/configuration.md)
   * [Exports](gang-series/turfs/exports.md)
+* [Crate Drops](gang-series/crate-drops/README.md)
+  * [Installation](gang-series/crate-drops/installation.md)
+  * [Configuration](gang-series/crate-drops/configuration.md)
+  * [Exports](gang-series/crate-drops/exports.md)
 * [Sell Drugs](gang-series/sell-drugs/README.md)
   * [Installation](gang-series/sell-drugs/installation.md)
   * [Configuration](gang-series/sell-drugs/configuration.md)
@@ -39,15 +49,11 @@
 
 ## Everyday Scripts
 
-* [📦 Crate Drops](everyday-scripts/crate-drops/README.md)
-  * [Installation](everyday-scripts/crate-drops/installation.md)
-  * [Configuration](everyday-scripts/crate-drops/configuration.md)
-  * [Exports](everyday-scripts/crate-drops/exports.md)
-* [🚦 Queue](everyday-scripts/queue/README.md)
+* [Queue](everyday-scripts/queue/README.md)
   * [Installation](everyday-scripts/queue/installation.md)
   * [Configuration](everyday-scripts/queue/configuration.md)
   * [Exports](everyday-scripts/queue/exports.md)
-* [💰 Pawnshop](everyday-scripts/pawnshop/README.md)
+* [Pawnshop](everyday-scripts/pawnshop/README.md)
   * [Installation](everyday-scripts/pawnshop/installation.md)
   * [Configuration](everyday-scripts/pawnshop/configuration.md)
 * [🛍️ Shops](everyday-scripts/shops/README.md)
@@ -65,12 +71,6 @@
 * [🔫 Switch](everyday-scripts/switch/README.md)
   * [Installation](everyday-scripts/switch/installation.md)
   * [Configuration](everyday-scripts/switch/configuration.md)
-
-## Apps
-
-* [📍 Live Location](apps/live-location/README.md)
-  * [Installation](apps/live-location/installation.md)
-  * [Configuration](apps/live-location/configuration.md)
 
 ## 🔫 Weapon Packs
 

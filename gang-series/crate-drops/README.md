@@ -2,11 +2,11 @@
 description: >-
   Air-dropped supply crates with a cargo plane flyover, tiered loot, contested
   unlock timers and combat zones. Drops can fire on a timer, be spawned by
-  admins, or be called in by players with a supply signal item.
+  admins, or be called in by players with a supply s
 icon: parachute-box
 ---
 
-# 📦 Crate Drops
+# Crate Drops
 
 ## Features
 
@@ -20,7 +20,7 @@ icon: parachute-box
 * Combat zones drawn around every active drop and synced to all players for other scripts to read,
 * Predefined drop locations or fully random placement anywhere on the map,
 * Supply signal cooldowns, item validation and coordinate checks to stop players abusing the signal,
-* vanish_gangs integration that notifies gang members when a crate goes live,
+* vanish\_gangs integration that notifies gang members when a crate goes live,
 * Discord webhook logging for drops created, opened, looted, expired, admin actions and signal use,
 * Built on a bridge system so it runs on ESX, QB and QBox with ox, qb or qs inventory
 
