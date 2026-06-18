@@ -10,13 +10,17 @@ icon: sack-dollar
 
 ## Features
 
-* Configurable settings for defining tax rates and transaction limits.
-* Notification system for informing players about money laundering activities.
-* Integration with ESX framework for managing in-game accounts.
-* Flexible customization options for adjusting system behavior according to server needs.
-
-
+* Wash points where players turn dirty money into clean cash, with a fee taken on each wash,
+* Set as many wash locations as you want, each with its own fee and its own minimum and maximum amount,
+* Per-location tax so a back-alley spot can cost more than a downtown one,
+* Optional progress bar, shown as a bar or a circle,
+* Text UI prompt and a world marker at each location,
+* Optional map blip with your choice of sprite, colour and scale,
+* Notifications through ox\_lib or your own custom handler,
+* Works on ESX, QB and QBOX
 
 ## Preview
 
-Coming soon..
+{% hint style="info" %}
+Add your preview video embed here.
+{% endhint %}

@@ -75,3 +75,15 @@ exports.vanish_shops:RestockAll()
 ```
 
 Returns: void - Resets every item’s stock to its configured default values.
+
+***
+
+**Commands**
+
+| Command | Description |
+| --- | --- |
+| `/shop:restock` | Reset every item's stock back to its configured default. |
+| `/shop:rotate` | Rotate the shop's stock selection. |
+| `/shop:setstock` | Set the stock amount for a specific item. |
+
+These are admin commands. Access is controlled in the configuration.

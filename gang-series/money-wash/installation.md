@@ -8,14 +8,16 @@ description: >-
 
 ## Dependencies
 
-The following dependencies listed below are required to the run this resource, without them, this resource will not work.
-
-* ESX (es\_extended) [https://github.com/esx-framework/esx\_core](https://github.com/esx-framework/esx_core)
+* A supported framework: ESX, QB or QBOX
 * ox\_lib [https://github.com/overextended/ox\_lib](https://github.com/overextended/ox_lib)
 
 ## Steps
 
-1. Download from keymaster and drag into your `resources` folder
-2. Start the `vanish_moneywash`resource or ensure in the server.cfg
-3. Ensure you have the dependencies needed to run the script
-4. Configure the resource to your liking in the config.lua file
+1. Download from keymaster and drag `vanish_moneywash` into your `resources` folder.
+2. Add `ensure vanish_moneywash` to your `server.cfg`, after your framework and ox\_lib.
+3. Open `shared/config.lua` and set your wash locations, fees and limits.
+4. Start, or restart, the resource.
+
+{% hint style="info" %}
+The script washes the `black_money` account into clean cash. If your server uses a different name for dirty money, adjust it to match your framework setup.
+{% endhint %}

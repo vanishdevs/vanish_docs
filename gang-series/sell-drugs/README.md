@@ -9,13 +9,18 @@ icon: pills
 
 ## Features
 
-* Sell drugs to NPCs in specific zones with immersive animations,
-* Dynamic police-based price scaling for balanced risk and reward,
-* Gain XP and rank up through a customizable progression system,
-* Configurable rejection chance adds unpredictability to deals,
-* Support for multiple drug types with custom prices and limits,
-* Smooth player-NPC transactions with visual feedback and UI prompts,
-* Fully synced server-client events for reliable, lightweight performance.
+* Sell drugs to NPCs inside set zones, with animations and a clean on-screen prompt,
+* Single-sale mode or autosell, which keeps moving the same drug until you run out, leave the zone, die or get in a car,
+* Drug picker that either grabs the first drug you own or lets you choose from a menu with prices and counts,
+* Police-based price scaling, so prices climb as more cops come online, with a minimum cop count you can require,
+* XP and ranks with a fully customizable progression, each rank with its own name, colour and earnings multiplier,
+* Hot zones that pay a higher multiplier or a flat bonus on every sale made inside them,
+* A built-in dealer leaderboard with player profiles, opened by a command,
+* Rejection chance on each deal to keep things unpredictable,
+* Confirm a sale by keybind or by an ox\_target option on the NPC,
+* Optional dispatch alerts to police on a successful or rejected sale,
+* Block selling while a weapon is drawn,
+* Works on ESX, QB and QBOX, with dispatch and ambulance bridges included
 
 ## Preview
 

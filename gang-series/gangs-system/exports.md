@@ -76,10 +76,65 @@ Returns: string - Gang display label or nil
 #### IsPlayerInGang
 
 ```lua
-local inGang = exports.vanish_gangs:IsPlayerInGang(playerId)
+local inGang = exports.vanish_gangs:IsPlayerInGang(playerId, gangName)
 ```
 
-Returns: boolean - Whether the player is in any gang
+`gangName` is optional. Leave it out to check if the player is in any gang, or pass one to check a specific gang.
+
+Returns: boolean
+
+#### GetPlayerRank
+
+```lua
+local rank = exports.vanish_gangs:GetPlayerRank(playerId)
+```
+
+Returns: number - The player's rank number, or nil if they are not in a gang
+
+#### GetGang
+
+```lua
+local gang = exports.vanish_gangs:GetGang(gangName)
+```
+
+Returns: table - The gang's record, or nil if it does not exist
+
+#### GetAllGangs
+
+```lua
+local gangs = exports.vanish_gangs:GetAllGangs()
+```
+
+Returns: table - Every gang, keyed by gang name
+
+#### GetGangRanks
+
+```lua
+local ranks = exports.vanish_gangs:GetGangRanks(gangName)
+```
+
+Returns: Array of ranks for the gang, sorted lowest to highest
+
+```lua
+{
+    {
+        ranking = 1,            -- Rank number
+        name = "soldier",       -- Internal name
+        label = "Soldier",      -- Display label
+        icon = "fa-solid fa-user",
+        color = "#ffffff",
+        permissions = { ... }   -- Rank permissions
+    }
+}
+```
+
+#### GetGangRelationship
+
+```lua
+local relationship = exports.vanish_gangs:GetGangRelationship(gangA, gangB)
+```
+
+Returns: string - `'allied'`, `'neutral'` or `'rival'`
 
 ***
 
@@ -197,3 +252,35 @@ local members = exports.vanish_gangs:GangMembers()
 members.InsertPlayer('ballas', 1, playerId)
 members.PromotePlayer(identifier, 'ballas', 3)
 ```
+
+***
+
+### Server Events
+
+Listen for these on your own resource with `AddEventHandler` to react when gangs change. They fire on the server.
+
+```lua
+AddEventHandler('vanish_gangs:server:gangCreated', function(gangName, label, createdByIdentifier)
+    -- a gang was created
+end)
+
+AddEventHandler('vanish_gangs:server:gangDeleted', function(gangName)
+    -- a gang was deleted
+end)
+
+AddEventHandler('vanish_gangs:server:playerJoinedGang', function(source, identifier, gangName, rank, reason)
+    -- a player joined a gang
+end)
+
+AddEventHandler('vanish_gangs:server:playerLeftGang', function(source, identifier, gangName, oldRank, reason)
+    -- a player left or was removed from a gang
+end)
+
+AddEventHandler('vanish_gangs:server:rankChanged', function(source, identifier, gangName, oldRank, newRank, changedBy)
+    -- a player's rank changed
+end)
+```
+
+{% hint style="info" %}
+`source` is the player's server ID when they are online, and nil for offline targets. Always treat `identifier` as the reliable key.
+{% endhint %}

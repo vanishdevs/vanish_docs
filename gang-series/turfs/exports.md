@@ -93,6 +93,14 @@ Returns: Gang statistics object or nil if gang not found
 }
 ```
 
+**GetZones**
+
+```lua
+local zones = exports.vanish_turfs:GetZones()
+```
+
+Returns: the current turf zones, including any built or changed with the in-game editor. Handy for drawing turf areas on an external map or web panel.
+
 ***
 
 #### Usage Examples
@@ -148,3 +156,20 @@ for i, gang in ipairs(leaderboard) do
     ))
 end
 ```
+
+***
+
+#### Commands
+
+| Command | Description |
+| --- | --- |
+| `/turfleaderboard` | Open the leaderboard. Name set by `leaderboard.commandName`. |
+| `/turfsettings` | Open the per-player settings menu. |
+| `/turfeditor` | Open the in-game zone editor. |
+| `/turfs` | Open the admin turf panel. |
+| `/turfstart` | Force start a turf. |
+| `/turfsend` | Force end a turf. |
+| `/turfextend` | Extend a running turf. |
+| `/setturfganglogo` | Set a gang's logo. |
+
+Every command's access is controlled by the `commands` block in `shared/config.lua`. By default the leaderboard and settings are open to everyone and the rest are admin only.
