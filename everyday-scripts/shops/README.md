@@ -21,7 +21,3 @@ description: >-
 * Localization through ox\_lib locales and configurable item image base path (e.g., ox\_inventory) for consistent visuals.
 * Exports on client (open/close/check UI) and server (get/set/add/restock stock) for easy integration with other resources.
 * Integration-ready architecture using ox\_lib callbacks and oxmysql to validate purchases, deduct payments, and sync stock in real time.
-
-## Preview
-
-{% embed url="https://www.youtube.com/watch?v=oCm7TuduWjc" %}

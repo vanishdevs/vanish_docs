@@ -33,7 +33,7 @@ The editor reads the source `.meta` file at save time and looks for an `<Item ty
 
 The weapon isn't in the scanner cache. Either:
 
-* A rescan hasn't run since the file was added — click **Rescan**.
+* A rescan hasn't run since the file was added - click **Rescan**.
 * The weapon's resource is in `scanner.excludeResources`.
 * The weapon fails the `IsPlayerWeapon` check (e.g. ped/animal weapons are filtered out by design).
 
@@ -63,7 +63,7 @@ The detected inventory exposes runtime item APIs but not a writable items file. 
 
 #### "Could not find insertion point in items file"
 
-The installer couldn't locate a `return {` or `Items = {` opening in the inventory's items file — usually because the file has been heavily customized or uses a non-standard format. Open the file and confirm it starts with the expected items table structure.
+The installer couldn't locate a `return {` or `Items = {` opening in the inventory's items file - usually because the file has been heavily customized or uses a non-standard format. Open the file and confirm it starts with the expected items table structure.
 
 #### "Failed to write to inventory items file"
 
@@ -71,7 +71,7 @@ The file is read-only, the server process doesn't have write permission, or the 
 
 #### Component install creates a duplicate entry
 
-You ran install with `mode = 'create'` when you should have used `mode = 'auto'` or `'append'`. The default is `auto` — which appends to an existing component item if one exists, only creating a new entry if none does. Force-create is intentional.
+You ran install with `mode = 'create'` when you should have used `mode = 'auto'` or `'append'`. The default is `auto` - which appends to an existing component item if one exists, only creating a new entry if none does. Force-create is intentional.
 
 ### Meta Editor
 
@@ -85,7 +85,7 @@ You ran install with `mode = 'create'` when you should have used `mode = 'auto'`
 
 #### Validation errors
 
-If you see `"X must be a number"`, `"X minimum is N"`, `"X maximum is N"` — your input is outside the field's allowed range. Each field has a min/max defined in `MetaEditorService.GetFieldMap()`. To bypass validation set `metaEditor.validateBeforeSave = false` (not recommended — invalid values can crash the game).
+If you see `"X must be a number"`, `"X minimum is N"`, `"X maximum is N"` - your input is outside the field's allowed range. Each field has a min/max defined in `MetaEditorService.GetFieldMap()`. To bypass validation set `metaEditor.validateBeforeSave = false` (not recommended - invalid values can crash the game).
 
 ### Backups & Rollback
 
@@ -95,11 +95,11 @@ If you see `"X must be a number"`, `"X minimum is N"`, `"X maximum is N"` — yo
 
 #### "Backup not found"
 
-The backup ID doesn't exist or has been pruned. Backups are capped per file by `backups.keepPerFile` (default 20) — oldest are deleted automatically.
+The backup ID doesn't exist or has been pruned. Backups are capped per file by `backups.keepPerFile` (default 20) - oldest are deleted automatically.
 
 #### "Failed to write rollback content"
 
-Same root cause as **"Failed to save modified file"** above — file permissions or read-only flag on the target meta file.
+Same root cause as **"Failed to save modified file"** above - file permissions or read-only flag on the target meta file.
 
 ### Audit Log
 
@@ -110,7 +110,7 @@ Same root cause as **"Failed to save modified file"** above — file permissions
 * Check the server console for `^2[WeaponEditor]^0 Database initialized successfully!` on startup. If you see `^1Could not load sql/vanish_weaponeditor.sql` or `^3Database initialization completed with errors`, the table didn't create. Verify `oxmysql` has database write access and your DB user has `CREATE TABLE` permission.
 
 {% hint style="info" %}
-The audit table is created automatically on first start via server/db.lua — no manual SQL import is needed.
+The audit table is created automatically on first start via server/db.lua - no manual SQL import is needed.
 {% endhint %}
 
 #### Audit log isn't recording new entries
@@ -123,7 +123,7 @@ The DB connection dropped or the table is corrupted. Check the oxmysql console o
 
 * Confirm your player is in one of the ACE groups listed in `config.admin.configure`.
 * Verify the ACE group with `IsPlayerAceAllowed` in a separate test command, or check `server.cfg` for the `add_ace` / `add_principal` lines.
-* If `config_permissions.lua` has `enabled = true`, the simple `admin.configure` list is **ignored** — your player must match a rule in `config_permissions.lua` instead.
+* If `config_permissions.lua` has `enabled = true`, the simple `admin.configure` list is **ignored** - your player must match a rule in `config_permissions.lua` instead.
 
 #### A specific button is greyed out / "permission denied" toast
 
@@ -139,14 +139,14 @@ The DB connection dropped or the table is corrupted. Check the oxmysql console o
 
 Your server has a lot of resources. Tune the scanner:
 
-* Lower `scanner.batchSize` (default 10) — smaller batches yield to the server tick more often.
-* Raise `scanner.batchDelayMs` (default 50) — adds a longer pause between batches.
+* Lower `scanner.batchSize` (default 10) - smaller batches yield to the server tick more often.
+* Raise `scanner.batchDelayMs` (default 50) - adds a longer pause between batches.
 * Disable `scanner.scanOnStartup` and trigger scans manually only when needed.
 * Add unused resources to `scanner.excludeResources` so they're skipped entirely.
 
 #### Editor feels slow when typing in the stat editor
 
-Rate limiting is throttling save requests. Increase `rateLimit.editMs` is the wrong fix — the limit is there for a reason. Instead, use the bulk-edit mode (multi-select fields and submit once) rather than saving on every keystroke.
+Rate limiting is throttling save requests. Increase `rateLimit.editMs` is the wrong fix - the limit is there for a reason. Instead, use the bulk-edit mode (multi-select fields and submit once) rather than saving on every keystroke.
 
 ### Still stuck?
 

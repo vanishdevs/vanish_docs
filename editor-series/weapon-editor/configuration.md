@@ -1,17 +1,15 @@
 ---
 description: >-
-  The configuration options are listed below, with no additional explanations
-  provided on this page as the code comments thoroughly explain each option.
+  The Weapon Editor config files, including command access, scanner behavior,
+  installer safety, backups, audit logging and optional capability rules.
 ---
 
 # Configuration
 
-## Configuration
-
 The weapon editor reads two config files at startup:
 
-* **`shared/config.lua`** — general settings: command, scanner, installer, UI, backups, audit, rate limiting.
-* **`shared/config_permissions.lua`** — optional fine-grained capability rules. When disabled, the simple `admin.configure` list in `config.lua` is used instead.
+* **`shared/config.lua`** - general settings: command, scanner, installer, UI, backups, audit, rate limiting.
+* **`shared/config_permissions.lua`** - optional fine-grained capability rules. When disabled, the simple `admin.configure` list in `config.lua` is used instead.
 
 {% hint style="warning" %}
 Both files are reloaded only on resource restart. After editing, run `restart vanish_weaponeditor` in the server console.
@@ -253,7 +251,7 @@ return {
 
 | Capability         | What it gates                                          |
 | ------------------ | ------------------------------------------------------ |
-| `all`              | Master flag — grants every capability below.           |
+| `all`              | Master flag - grants every capability below.           |
 | `scanWeapons`      | Trigger a rescan from the dashboard.                   |
 | `installWeapons`   | Install a weapon into the inventory resource.          |
 | `uninstallWeapons` | Remove a weapon from the inventory resource.           |
@@ -264,7 +262,7 @@ return {
 
 #### Match types
 
-A rule's `match` block supports two keys. Both may be present on the same rule — if either matches, the rule applies.
+A rule's `match` block supports two keys. Both may be present on the same rule - if either matches, the rule applies.
 
 ```lua
 match = { aces = { 'group.admin', 'group.god' } },                       -- ACE group / principal
@@ -277,5 +275,5 @@ match = { identifiers = { 'license:abc123...', 'steam:110000100000000' } }, -- S
 | `identifiers` | array | Any of the player's identifiers (license, steam, fivem, discord, etc.) is in the list.   |
 
 {% hint style="info" %}
-Rules are evaluated highest-priority first. A player matching multiple rules gets the capabilities of the **highest-priority** match only — capabilities are not merged across rules.
+Rules are evaluated highest-priority first. A player matching multiple rules gets the capabilities of the **highest-priority** match only - capabilities are not merged across rules.
 {% endhint %}

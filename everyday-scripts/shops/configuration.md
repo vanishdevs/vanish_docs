@@ -1,12 +1,28 @@
 ---
 description: >-
-  The configuration options are listed below, with no additional explanations
-  provided on this page as the code comments thoroughly explain each option.
+  How the shop files fit together: opening controls, locations, modes, payment
+  methods, rotating stock and per-mode item lists.
 ---
 
 # Configuration
 
-config.lua
+Shops are built from five shared config files. The usual setup order is:
+
+1. Configure the global opening method in `shared/config.lua`.
+2. Set payment methods in `shared/config_paymentmethods.lua`.
+3. Define shop modes in `shared/config_modes.lua`.
+4. Place each shop in `shared/config_locations.lua`.
+5. Fill the item lists in `shared/config_items.lua`.
+
+| File | What it controls |
+| --- | --- |
+| `shared/config.lua` | Commands, keybinds, max purchase quantity, defaults, rotation and item image path |
+| `shared/config_paymentmethods.lua` | Cash, bank, dirty money and item-based payments |
+| `shared/config_modes.lua` | Shop types, categories, theme, target icon and blip style |
+| `shared/config_locations.lua` | World locations and per-location overrides |
+| `shared/config_items.lua` | Items, prices, stock and rotation chance per mode |
+
+## shared/config.lua
 
 ```lua
 return {
@@ -25,6 +41,9 @@ return {
     -- Keybind to open shop, nearest one (set to false to disable)
     keybind = false,
     keybindDescription = 'Open Shop',
+
+    -- Maximum quantity a player can buy in a single transaction
+    maxPurchaseQuantity = 9999,
 
     -- Global defaults for all locations (can be overridden per-location)
     defaults = {
@@ -50,7 +69,7 @@ return {
     -- Enable rotating item system (items have a chance to appear)
     -- Items rotate on resource restart or manual command
     rotation = {
-        enabled = true,            -- Set to true to enable rotating items
+        enabled = false,           -- Set to true to enable rotating items
         maxItems = 15,              -- Maximum number of items to show at once (0 = no limit)
         guaranteedCategories = {},  -- Categories that always appear (e.g., {'ammo', 'tools'})
         minPerCategory = 1,         -- Minimum items per category (if category has items)
@@ -70,7 +89,36 @@ return {
 
 ```
 
-config\_paymentmethods.lua
+### Opening and interaction
+
+`command = 'shop'` registers `/shop` and opens the nearest available shop.
+Set it to false if you only want marker, NPC or target interaction. `keybind`
+can be set to a key if you want a FiveM keybind as another entry point.
+
+`defaults.type` decides how locations behave unless they override it:
+
+| Type | What players use |
+| --- | --- |
+| `marker` | Walk up to the marker and interact. |
+| `npc` | Walk up to the spawned shop ped. |
+
+`spawnDistance` controls when the ped or marker starts being active around the
+location. `maxPurchaseQuantity` caps bulk buys, then stock, funds and inventory
+space still apply on top.
+
+### Rotation
+
+When `rotation.enabled = true`, the script builds a rotating list from each
+mode's items on restart or `/shop:rotate`. `chance` on each item decides how
+likely it is to appear, `maxItems` caps the visible list, and
+`guaranteedCategories` can force important categories to stay stocked.
+
+{% hint style="info" %}
+Leave rotation off for normal convenience stores. Turn it on for black markets,
+event shops or rotating rare stock.
+{% endhint %}
+
+## shared/config_paymentmethods.lua
 
 ```lua
 return {
@@ -142,7 +190,17 @@ return {
 
 ```
 
-config\_modes.lua
+Payment methods can be money accounts or inventory items. Restrict a method to
+specific modes with `modes = { 'blackmarket' }`, or leave modes empty so it can
+be used everywhere.
+
+For item payments, `item` must match the inventory item name. The price in
+`config_items.lua` is the required item count.
+
+## shared/config_modes.lua
+
+Modes are shop templates. Locations point at a mode, and the mode decides the
+shop title, category list, theme, target icon and blip.
 
 ```lua
 -- Each mode defines the shop's appearance, target icon, and blip settings
@@ -254,7 +312,11 @@ return {
 
 ```
 
-&#x20;config\_locations.lua
+Categories in a mode should match the `category` values on that mode's items.
+If an item uses a category that the mode does not list, it will not fit cleanly
+into the UI.
+
+## shared/config_locations.lua
 
 ```lua
 -- Simple format: { id, mode, coords }
@@ -295,7 +357,11 @@ return {
 }
 ```
 
-config\_items.lua
+Each location needs a unique `id`, a `mode` that exists in
+`shared/config_modes.lua`, and `coords`. Per-location overrides let one shop use
+an NPC while the rest use markers, hide a blip, or use a custom blip label.
+
+## shared/config_items.lua
 
 ```lua
 -----------------------------------------------------------
@@ -412,3 +478,20 @@ return {
 
 
 ```
+
+Each item entry belongs to a mode and supports:
+
+| Field | What it does |
+| --- | --- |
+| `item` | Inventory item name. Must exist in your inventory. |
+| `label` | Name shown in the shop UI. |
+| `category` | Category tab. Should match a category in the mode. |
+| `description` | Short item description. |
+| `stock` | `-1` for unlimited, or a number for limited stock. |
+| `chance` | Rotation chance from 0 to 100 when rotation is enabled. |
+| `prices` | Prices by payment method. Money prices are currency amounts; item-payment prices are item counts. |
+
+{% hint style="warning" %}
+Item names and payment item names must match your inventory exactly. If a shop
+opens but an item cannot be bought, check the names first.
+{% endhint %}

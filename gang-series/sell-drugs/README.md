@@ -21,7 +21,3 @@ icon: pills
 * Optional dispatch alerts to police on a successful or rejected sale,
 * Block selling while a weapon is drawn,
 * Works on ESX, QB and QBOX, with dispatch and ambulance bridges included
-
-## Preview
-
-{% embed url="https://youtu.be/jasR03EIfhk?si=xJTolpcsJbGGYPAZ" %}

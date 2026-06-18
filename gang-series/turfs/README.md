@@ -22,7 +22,3 @@ icon: swords
 * Works with vanish\_gangs and rcore\_gangs, on ESX, QB and QBOX,
 * Logging to Discord, Fivemanage, Fivemerr, ox\_lib or a custom handler,
 * Announcements over chat or notifications, with a card style that matches the rest of the suite
-
-## Preview
-
-{% embed url="https://youtu.be/t_MRPYWA-_Q?si=O_qHfJZbv1BheVTc" %}

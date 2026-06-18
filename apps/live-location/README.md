@@ -21,9 +21,3 @@ A custom lb-phone app, styled after Find My, that lets players share their live 
 * Built to stay light on busy servers, with tunable push rate, movement thresholds and presence checks,
 * Optional logging of share requests, accepts, declines and revokes to Discord, Fivemanage, ox\_lib or a custom handler,
 * Works alongside ESX, QB and QBOX
-
-## Preview
-
-{% hint style="info" %}
-Add your preview video embed here.
-{% endhint %}

@@ -17,9 +17,3 @@ icon: hand-holding-dollar
 * Configurable ped model, scenario and as many shop locations as you want,
 * Optional map blip with your choice of sprite, colour and scale,
 * Framework bridge included for ESX, QB, QBOX and ox\_core
-
-## Preview
-
-{% hint style="info" %}
-Add your preview video embed here.
-{% endhint %}

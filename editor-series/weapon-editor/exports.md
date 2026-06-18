@@ -15,7 +15,7 @@ No client-side exports available.
 The weapon editor exposes a small set of helper exports for reading the scanner cache and install state.
 
 {% hint style="info" %}
-There are no direct module exports. The underlying services (`WeaponScanner`, `InstallerService`, `MetaEditorService`, `BackupService`, `AuditService`) are intentionally scoped to this resource so that all writes — installs, meta edits, rollbacks — go through the audited UI flow.
+There are no direct module exports. The underlying services (`WeaponScanner`, `InstallerService`, `MetaEditorService`, `BackupService`, `AuditService`) are intentionally scoped to this resource so that all writes - installs, meta edits, rollbacks - go through the audited UI flow.
 {% endhint %}
 
 #### Helper Exports
@@ -126,7 +126,7 @@ local installed = exports.vanish_weaponeditor:IsWeaponInstalled(weaponName)
 | ------------ | -------- | --------------------------------------- |
 | `weaponName` | `string` | The full weapon name. Case-insensitive. |
 
-**Returns:** `boolean` — whether the weapon is currently registered in the active inventory system (`ox_inventory`, `qb-inventory`, or `qs-inventory`).
+**Returns:** `boolean` - whether the weapon is currently registered in the active inventory system (`ox_inventory`, `qb-inventory`, or `qs-inventory`).
 
 ### Usage Examples
 

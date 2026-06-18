@@ -1,7 +1,7 @@
 ---
 description: >-
-  A comprehensive, step-by-step installation guide detailing how to successfully
-  set up my resource on your server.
+  Setup for the money wash resource, including framework requirements and the
+  dirty-money account it converts.
 ---
 
 # Installation

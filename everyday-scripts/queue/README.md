@@ -22,9 +22,3 @@ icon: people-line
 * Admin commands and developer exports for managing priority on the fly,
 * Logging to Discord, Fivemanage, Fivemerr, ox\_lib or your own custom handler,
 * Server side only and built to stay light
-
-## Preview
-
-{% hint style="info" %}
-Add your preview video embed here.
-{% endhint %}

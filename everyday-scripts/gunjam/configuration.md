@@ -1,12 +1,22 @@
 ---
 description: >-
-  The configuration options are listed below, with no additional explanations
-  provided on this page as the code comments thoroughly explain each option.
+  How to tune global jam behavior, clear attempts, whitelists, weapon-specific
+  chances and weapon-group fallbacks.
 ---
 
 # Configuration
 
-config.lua
+Gun Jam uses one global config plus three tuning files. The weapon-specific file
+wins first, then the weapon group file, then the global default chance.
+
+| File | What it controls |
+| --- | --- |
+| `shared/config.lua` | Global jam behavior, notifications, effects and clear attempts |
+| `shared/config_whitelisted.lua` | Jobs, identifiers and ACE groups that are immune |
+| `shared/config_weapons.lua` | Exact jam chance per weapon hash |
+| `shared/config_weapongroups.lua` | Fallback chance by GTA weapon group |
+
+## shared/config.lua
 
 ```lua
 return {
@@ -54,7 +64,25 @@ return {
 }
 ```
 
-config\_whitelisted.lua
+### Global behavior
+
+`global.enabled` is the master switch. `defaultChance` is the fallback jam
+chance from 0 to 100 when no weapon or group override applies. `checkInterval`
+controls how often shots are checked, with `0` meaning every shot.
+
+`jamDuration` is how long the player waits before they can try to clear the jam,
+and `clearJamKey` is the control used for the clear attempt.
+
+### Clear attempts
+
+`clearJam.successChance` is rolled on each clear attempt. A low value makes
+jams feel dangerous because the player may need several attempts. A higher value
+makes jams more like a short reload penalty.
+
+`clearJam.cooldown` prevents repeated spam attempts. The animation block controls
+the clear animation.
+
+## shared/config_whitelisted.lua
 
 ```lua
 return {
@@ -79,7 +107,15 @@ return {
 }
 ```
 
-config\_weapons.lua
+Whitelists can be job names, player identifiers or ACE groups. Use this for
+police, staff or other groups that should not be affected by weapon jams.
+
+{% hint style="info" %}
+ACE groups use the same strings you grant in `server.cfg`, for example
+`group.admin`.
+{% endhint %}
+
+## shared/config_weapons.lua
 
 ```lua
 -- Weapon-specific jam chances (overrides default)
@@ -175,7 +211,18 @@ return {
 
 ```
 
-config\_weapongroups.lua
+Weapon values override everything else:
+
+| Value | Result |
+| --- | --- |
+| `0` | This weapon never jams. |
+| `-1` | Use the group or default chance. |
+| `1` to `100` | Use this exact percentage. |
+
+Use exact weapon overrides for weapons that should feel unusually reliable or
+unreliable.
+
+## shared/config_weapongroups.lua
 
 ```lua
 -- Weapon group jam chances (fallback if specific weapon not listed)
@@ -193,3 +240,12 @@ return {
 }
 
 ```
+
+Group chances are the fallback when a weapon is not listed in
+`shared/config_weapons.lua` or is set to `-1`. This is the quickest way to tune
+whole classes, like pistols, SMGs, rifles and heavy weapons.
+
+{% hint style="warning" %}
+Use GTA weapon hash names in `config_weapons.lua`, and GTA weapon group hashes
+in `config_weapongroups.lua`. Mixing the two will make the override miss.
+{% endhint %}

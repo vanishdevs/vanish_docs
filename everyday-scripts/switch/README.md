@@ -11,9 +11,3 @@ description: >-
 
 * Configurable settings for switching weapons
 * Switch item needed to perform any action
-
-
-
-## Preview
-
-{% embed url="https://www.youtube.com/watch?v=BZx6naiMa8Q" %}

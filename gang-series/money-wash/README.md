@@ -18,9 +18,3 @@ icon: sack-dollar
 * Optional map blip with your choice of sprite, colour and scale,
 * Notifications through ox\_lib or your own custom handler,
 * Works on ESX, QB and QBOX
-
-## Preview
-
-{% hint style="info" %}
-Add your preview video embed here.
-{% endhint %}

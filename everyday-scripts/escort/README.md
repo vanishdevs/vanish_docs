@@ -14,7 +14,3 @@ description: >-
 * Configurable controls with keybind and target system support
 * Works for both conscious and unconscious (ragdoll) players
 * Includes safety checks to prevent abuse or unrealistic scenarios
-
-## **Preview**
-
-{% embed url="https://youtu.be/KW7pov3sFko?si=90975HZphNpbAvow" %}

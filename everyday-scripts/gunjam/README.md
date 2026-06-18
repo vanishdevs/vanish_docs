@@ -22,7 +22,3 @@ description: >-
 * Job-based whitelisting system exempting specific professions like police, sheriff, ambulance, and mechanic from jamming,
 * Identifier-based whitelisting supporting Steam, license, Discord, FiveM IDs, and ACE permission groups,
 * Highly configurable settings across multiple config files for weapons, global options, whitelisting, and effects
-
-## Preview
-
-{% embed url="https://www.youtube.com/watch?v=ug9ZF-69As0" %}

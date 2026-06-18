@@ -23,9 +23,3 @@ icon: parachute-box
 * vanish_gangs integration that notifies gang members when a crate goes live,
 * Discord webhook logging for drops created, opened, looted, expired, admin actions and signal use,
 * Built on a bridge system so it runs on ESX, QB and QBox with ox, qb or qs inventory
-
-## Preview
-
-{% hint style="info" %}
-Add your preview video embed here.
-{% endhint %}

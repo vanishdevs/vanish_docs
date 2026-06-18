@@ -23,9 +23,3 @@ icon: mobile-screen-button
 * Full stats and a leaderboard tracking wins, losses, kills, deaths, K/D and net profit, with an optional seasonal reset,
 * Works with vanish\_gangs, qb-gangs and rcore\_gangs, on ESX, QB and QBOX,
 * Logging to Discord, Fivemanage, Fivemerr, ox\_lib or a custom handler
-
-## Preview
-
-{% hint style="info" %}
-Add your preview video embed here.
-{% endhint %}

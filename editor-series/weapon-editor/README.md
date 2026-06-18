@@ -15,8 +15,3 @@ icon: gun
 * Configurable management points with NPC or marker interaction,
 * Clear permissions system ensuring only leaders can manage gangs,
 * User-friendly context menus for smooth administration in-game
-
-## Preview
-
-{% embed url="https://www.youtube.com/watch?v=xxdOPNJpDOE" %}
-
