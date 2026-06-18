@@ -2,7 +2,13 @@
 
 ## Information
 
-* [👋 Introduction](README.md)
+* [Introduction](README.md)
+
+## Apps
+
+* [Live Location](apps/live-location/README.md)
+  * [Installation](apps/live-location/installation.md)
+  * [Configuration](apps/live-location/configuration.md)
 
 ## Gang Series
 
@@ -14,7 +20,7 @@
     * [Gang Management](gang-series/gangs-system/guides/gang-management.md)
     * [Advanced Gang Operations](gang-series/gangs-system/guides/advanced-gang-operations.md)
   * [Exports](gang-series/gangs-system/exports.md)
-* [📱 Gang Phone](gang-series/gangphone/README.md)
+* [Gang Phone](gang-series/gangphone/README.md)
   * [Installation](gang-series/gangphone/installation.md)
   * [Configuration](gang-series/gangphone/configuration.md)
   * [Guides](gang-series/gangphone/guides/README.md)
@@ -26,6 +32,12 @@
   * [Guides](gang-series/turfs/guides/README.md)
     * [Running Turf Wars](gang-series/turfs/guides/running-turf-wars.md)
   * [Exports](gang-series/turfs/exports.md)
+* [Crate Drops](gang-series/crate-drops/README.md)
+  * [Installation](gang-series/crate-drops/installation.md)
+  * [Configuration](gang-series/crate-drops/configuration.md)
+  * [Guides](gang-series/crate-drops/guides/README.md)
+    * [Drop Lifecycle and Tuning](gang-series/crate-drops/guides/drop-lifecycle-and-tuning.md)
+  * [Exports](gang-series/crate-drops/exports.md)
 * [Sell Drugs](gang-series/sell-drugs/README.md)
   * [Installation](gang-series/sell-drugs/installation.md)
   * [Configuration](gang-series/sell-drugs/configuration.md)
@@ -35,12 +47,6 @@
 * [Money Wash](gang-series/money-wash/README.md)
   * [Installation](gang-series/money-wash/installation.md)
   * [Configuration](gang-series/money-wash/configuration.md)
-* [📦 Crate Drops](gang-series/crate-drops/README.md)
-  * [Installation](gang-series/crate-drops/installation.md)
-  * [Configuration](gang-series/crate-drops/configuration.md)
-  * [Guides](gang-series/crate-drops/guides/README.md)
-    * [Drop Lifecycle and Tuning](gang-series/crate-drops/guides/drop-lifecycle-and-tuning.md)
-  * [Exports](gang-series/crate-drops/exports.md)
 
 ## Editor Series
 
@@ -52,38 +58,32 @@
 
 ## Everyday Scripts
 
-* [🚦 Queue](everyday-scripts/queue/README.md)
+* [Queue](everyday-scripts/queue/README.md)
   * [Installation](everyday-scripts/queue/installation.md)
   * [Configuration](everyday-scripts/queue/configuration.md)
   * [Guides](everyday-scripts/queue/guides/README.md)
     * [Priority Setup](everyday-scripts/queue/guides/priority-setup.md)
   * [Exports](everyday-scripts/queue/exports.md)
-* [💰 Pawnshop](everyday-scripts/pawnshop/README.md)
+* [Pawnshop](everyday-scripts/pawnshop/README.md)
   * [Installation](everyday-scripts/pawnshop/installation.md)
   * [Configuration](everyday-scripts/pawnshop/configuration.md)
-* [🛍️ Shops](everyday-scripts/shops/README.md)
+* [Shops](everyday-scripts/shops/README.md)
   * [Installation](everyday-scripts/shops/installation.md)
   * [Configuration](everyday-scripts/shops/configuration.md)
   * [Exports](everyday-scripts/shops/exports.md)
-* [🔫 Gun Jam](everyday-scripts/gunjam/README.md)
+* [Gun Jam](everyday-scripts/gunjam/README.md)
   * [Installation](everyday-scripts/gunjam/installation.md)
   * [Configuration](everyday-scripts/gunjam/configuration.md)
   * [Exports](everyday-scripts/gunjam/exports.md)
-* [🧑‍🤝‍🧑 Escort](everyday-scripts/escort/README.md)
+* [Escort](everyday-scripts/escort/README.md)
   * [Installation](everyday-scripts/escort/installation.md)
   * [Configuration](everyday-scripts/escort/configuration.md)
   * [Exports](everyday-scripts/escort/exports.md)
-* [🔫 Switch](everyday-scripts/switch/README.md)
+* [Switch](everyday-scripts/switch/README.md)
   * [Installation](everyday-scripts/switch/installation.md)
   * [Configuration](everyday-scripts/switch/configuration.md)
 
-## Apps
-
-* [📍 Live Location](apps/live-location/README.md)
-  * [Installation](apps/live-location/installation.md)
-  * [Configuration](apps/live-location/configuration.md)
-
-## 🔫 Weapon Packs
+## Weapon Packs
 
 * [Female V1](weapon-packs/female-v1/README.md)
   * [Installation](weapon-packs/female-v1/installation.md)
