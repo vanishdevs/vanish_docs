@@ -48,6 +48,18 @@ global = {
 
 Setting `openInventoryOnSuccess = false` turns the robbery into a pure RP mugging — the progress bar and notifications fire, but no inventory window opens and no items change hands.
 
+### Time restriction
+
+```lua
+timeRestriction = {
+    enabled   = false,
+    startHour = 20,  -- inclusive, 0-23 (in-game hour)
+    endHour   = 6,   -- exclusive, 0-23; wraps past midnight when startHour > endHour
+},
+```
+
+When `enabled = true`, a robbery can only be started while the in-game GTA world clock falls within the defined window. The window wraps past midnight, so `startHour = 20, endHour = 6` allows robberies between 8 pm and 6 am. This is enforced as a client-side gate (the same layer as the weapon and hands-up checks) because the GTA clock only exists client-side.
+
 ### Notifications
 
 ```lua
@@ -60,18 +72,33 @@ notifications = {
 
 Valid `position` values: `top`, `top-right`, `top-left`, `bottom`, `bottom-right`, `bottom-left`, `center-right`, `center-left`.
 
+### Rate limits
+
+```lua
+rateLimits = {
+    canRob    = { max = 10, windowSec = 10 }, -- robbery eligibility checks
+    completed = { max = 5,  windowSec = 10 }, -- robbery completion submissions
+    cancelled = { max = 10, windowSec = 10 }, -- robbery cancellation reports
+},
+```
+
+Per-player sliding-window rate limits on the server events players can fire. Each entry caps a player at `max` calls within a `windowSec` second window. Setting `max` or `windowSec` to `0`, or removing the entry, disables limiting for that action. These exist to prevent exploitation of the server callbacks — the defaults should not need changing on a normal server.
+
 ### Gang integration
 
 ```lua
 gangs = {
-    enabled        = true,
-    membersOnly    = false,   -- only players in a gang are allowed to rob
-    allowRobOwnGang    = false, -- same-gang members cannot rob each other
+    enabled             = true,
+    membersOnly         = false, -- only players in a gang are allowed to rob
+    allowRobOwnGang     = false, -- same-gang members cannot rob each other
     allowRobAlliedGangs = false, -- allied-gang members cannot rob each other
+    gangCooldownReduction = 0,   -- % reduction applied to the robber cooldown for gang members (0 disables)
 },
 ```
 
 All gang checks are skipped when `enabled = false`. Gang data comes from the vanish\_gangs bridge in `bridge/gangs/server/`.
+
+`gangCooldownReduction` is an integer 0–100. For example, `25` means a gang member waits 25% less time between robberies than a solo robber. The reduction is applied on top of `global.cooldownTime`.
 
 ### Input method
 
@@ -121,10 +148,12 @@ animations = {
 
 The victim animation is also what the script checks when `requireTargetHandsUp = true`. Players toggle their hands up by pressing `handsUpControl` (default H) on foot.
 
-### Progress bar
+### Progress indicator
 
 ```lua
-progressBar = {
+progress = {
+    type         = 'bar',     -- 'bar' (lib.progressBar) or 'circle' (lib.progressCircle)
+    position     = 'bottom',  -- circle only: 'middle' | 'bottom'
     useWhileDead = false,
     canCancel    = true,
     label        = 'Robbing person...',
@@ -135,6 +164,8 @@ progressBar = {
     },
 },
 ```
+
+`type = 'bar'` uses a standard progress bar across the bottom of the screen. `type = 'circle'` uses a circular indicator; `position` controls whether it sits in the `'middle'` or at the `'bottom'` of the screen.
 
 ### Leaderboard
 
