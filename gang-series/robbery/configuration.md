@@ -9,6 +9,7 @@ description: >-
 | File | What it controls |
 | --- | --- |
 | `shared/config.lua` | Global rules, input method, animations, notifications, gang rules, leaderboard |
+| `shared/config_zones.lua` | Optional zones that restrict where robberies can take place |
 | `shared/config_whitelistitems.lua` | Items that can never be stolen from a victim |
 | `shared/config_blacklistplayers.lua` | Jobs and identifiers barred from robbing or being robbed |
 | `bridge/logging/config.lua` | Logging adapters (Discord, FiveManage, FiveMerr, ox\_lib, custom) |
@@ -19,9 +20,8 @@ description: >-
 
 ```lua
 admin = {
-    toggleRobbery = 'admin',      -- /togglerobbery
-    clearCooldown = 'admin',      -- /clearrobbcooldown
-    viewStats     = 'mod',        -- /robbstats
+    toggleRobbery    = 'admin',   -- /togglerobbery
+    clearCooldown    = 'admin',   -- /clearrobbcooldown
     resetLeaderboard = 'admin',   -- /resetrobbleaderboard
 },
 ```
@@ -171,6 +171,26 @@ leaderboard = {
 Valid `rankingMetric` / `defaultMetric` values: `successful`, `failed`, `total`, `cash`, `items`, `last`.
 
 `itemImagePath` supports `{item}`, `%s`, or a plain folder path — the UI swaps in the item name automatically.
+
+---
+
+## shared/config\_zones.lua
+
+When `enabled = true`, a robbery may only be started while the robber is standing inside one of the defined zones. Both the client (instant feedback) and the server (authoritative check) enforce this. Leave `enabled = false` to allow robberies anywhere on the map.
+
+```lua
+return {
+    enabled = false,
+
+    zones = {
+        { label = 'Downtown Vinewood',  coords = vec3(215.0, -865.0, 30.0),   radius = 150.0 },
+        { label = 'Legion Square',      coords = vec3(195.0, -935.0, 30.0),   radius = 120.0 },
+        { label = 'Vespucci Beach',     coords = vec3(-1223.0, -1490.0, 4.0), radius = 200.0 },
+    },
+}
+```
+
+Each zone is a sphere defined by a `coords` (vec3) and a `radius` in metres. `label` is used in logs and notifications only. Add as many zones as you need.
 
 ---
 

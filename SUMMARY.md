@@ -47,7 +47,7 @@
 * [Money Wash](gang-series/money-wash/README.md)
   * [Installation](gang-series/money-wash/installation.md)
   * [Configuration](gang-series/money-wash/configuration.md)
-* [Robbery](gang-series/robbery/README.md)
+* [Player Robbery](gang-series/robbery/README.md)
   * [Installation](gang-series/robbery/installation.md)
   * [Configuration](gang-series/robbery/configuration.md)
   * [Exports](gang-series/robbery/exports.md)

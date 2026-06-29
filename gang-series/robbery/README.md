@@ -6,7 +6,7 @@ description: >-
 icon: hand-holding
 ---
 
-# Robbery
+# Player Robbery
 
 ## Features
 
