@@ -99,7 +99,7 @@ end
 | `/rob` | Everyone | Rob the nearest player. Only registered when `input.method` is `command` or `both`. The name is set by `input.command.name`. |
 | `/robleaderboard` | Everyone | Open the robbery leaderboard UI. Only registered when `leaderboard.enableCommand = true`. The name is set by `leaderboard.commandName`. |
 | `/togglerobbery` | `admin.toggleRobbery` ace | Toggle the robbery system on or off for the whole server. |
-| `/clearrobbcooldown [id]` | `admin.clearCooldown` ace | Clear both the robber and victim cooldowns for the given player server ID. |
-| `/resetrobbleaderboard` | `admin.resetLeaderboard` ace | Wipe the `robbery_stats` table and reset all counters. |
+| `/clearrobcooldown [id]` | `admin.clearCooldown` ace | Clear both the robber and victim cooldowns for the given player server ID. |
+| `/resetrobleaderboard` | `admin.resetLeaderboard` ace | Wipe the `robbery_stats` table and reset all counters. |
 
 Ace permissions for each admin command are set in the `admin` block of `shared/config.lua`. Set a value to `false` to allow anyone to run that command.

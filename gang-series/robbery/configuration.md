@@ -21,8 +21,8 @@ description: >-
 ```lua
 admin = {
     toggleRobbery    = 'admin',   -- /togglerobbery
-    clearCooldown    = 'admin',   -- /clearrobbcooldown
-    resetLeaderboard = 'admin',   -- /resetrobbleaderboard
+    clearCooldown    = 'admin',   -- /clearrobcooldown
+    resetLeaderboard = 'admin',   -- /resetrobleaderboard
 },
 ```
 
