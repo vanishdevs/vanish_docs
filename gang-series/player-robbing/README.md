@@ -1,12 +1,12 @@
 ---
 description: >-
-  A full player-to-player robbery system with dispatch alerts, gang rules,
+  A full player-to-player robbing system with dispatch alerts, gang rules,
   cooldowns, a leaderboard and direct inventory access, built on ox_lib and
   ox_target.
 icon: hand-holding
 ---
 
-# Player Robbery
+# Player Robbing
 
 ## Features
 
@@ -20,7 +20,7 @@ icon: hand-holding
 * Job blacklist preventing certain jobs from robbing or being robbed, with individual identifier bans,
 * Gang integration via vanish\_gangs: require gang membership, block same-gang or allied-gang robberies,
 * Dispatch bridge compatible with ps-dispatch, cd\_dispatch, qs-dispatch, rcore\_dispatch and linden\_outlawalert, with a standalone blip fallback for servers without a dispatch resource,
-* Robbery leaderboard with player profiles, sortable metrics and pagination, opened by command or keybind,
+* Player Robbing leaderboard with player profiles, sortable metrics and pagination, opened by command or keybind,
 * Admin commands to toggle the system server-wide, clear cooldowns for individual players and reset the leaderboard,
 * Discord, FiveManage, FiveMerr and ox\_lib logging adapters with per-event opt-in flags,
 * Works on ESX, QB and QBOX

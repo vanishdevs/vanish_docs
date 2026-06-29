@@ -1,7 +1,7 @@
 ---
 description: >-
-  The settings are split across four files in the shared and bridge folders.
-  This page maps out each one and explains the parts worth knowing.
+  Player Robbing settings are split across four files in the shared and bridge
+  folders. This page maps out each one and explains the parts worth knowing.
 ---
 
 # Configuration
@@ -178,10 +178,10 @@ leaderboard = {
     keybind = {
         enabled     = false,
         key         = 'F7',
-        description = 'Open robbing leaderboard',
+        description = 'Open Player Robbing leaderboard',
     },
 
-    title         = 'Robbing Leaderboard',
+    title         = 'Player Robbing Leaderboard',
     subtitle      = 'Top robbers in the city',
     logo          = '',           -- image URL; falls back to logoFallback when empty
     logoFallback  = 'RB',         -- initials shown when no logo is set
@@ -251,7 +251,7 @@ Add any ox\_inventory item name to the list to protect it. Set `enabled = false`
 
 ## shared/config\_blacklistplayers.lua
 
-Controls which jobs or specific players are barred from the robbery system.
+Controls which jobs or specific players are barred from the Player Robbing system.
 
 ```lua
 return {
@@ -272,13 +272,13 @@ return {
 
 ## bridge/logging/config.lua
 
-Robbery events can be forwarded to one or more logging services. Each service has an `enabled` flag and a per-event opt-in table.
+Player Robbing events can be forwarded to one or more logging services. Each service has an `enabled` flag and a per-event opt-in table.
 
 ```lua
 discord = {
     enabled  = false,
     url      = '',          -- Discord webhook URL
-    botName  = 'Robbery Log',
+    botName  = 'Player Robbing Log',
     avatarUrl = '',
     events = {
         robbery_success = true,

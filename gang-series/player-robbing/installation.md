@@ -1,7 +1,8 @@
 ---
 description: >-
-  Setup for vanish_robbing, including the database table, framework bridge,
-  target bridge and optional dispatch, gang and logging integrations.
+  Setup for Player Robbing, including the vanish_robbing resource, database
+  table, framework bridge, target bridge and optional dispatch, gang and logging
+  integrations.
 ---
 
 # Installation
