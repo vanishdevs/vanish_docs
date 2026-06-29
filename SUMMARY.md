@@ -47,6 +47,10 @@
 * [Money Wash](gang-series/money-wash/README.md)
   * [Installation](gang-series/money-wash/installation.md)
   * [Configuration](gang-series/money-wash/configuration.md)
+* [Player Robbing](gang-series/player-robbing/README.md)
+  * [Installation](gang-series/player-robbing/installation.md)
+  * [Configuration](gang-series/player-robbing/configuration.md)
+  * [Exports](gang-series/player-robbing/exports.md)
 
 ## Editor Series
 
